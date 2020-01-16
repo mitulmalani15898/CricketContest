@@ -8,93 +8,130 @@
             <div
               v-if="authError"
               style="color:red; font-size:15px; margin-bottom:10px;"
-            >{{authError}}</div>
+            >
+              {{ authError }}
+            </div>
           </center>
           <input
+            v-model="user.firstname"
             type="text"
             placeholder="First Name"
             name="fname"
-            v-model="user.firstname"
             @input="validateInputs"
           >
         </div>
         <center>
-          <span v-if="errors.firstnameValid" style="color:red; font-size:15px;">{{errors.firstname}}</span>
+          <span
+            v-if="errors.firstnameValid"
+            style="color:red; font-size:15px;"
+          >
+            {{ errors.firstname }}
+          </span>
         </center>
         <div class="textbox">
           <input
+            v-model="user.lastname"
             type="text"
             placeholder="Last Name"
             name="lname"
-            v-model="user.lastname"
             @input="validateInputs"
           >
         </div>
         <center>
-          <span v-if="errors.lastnameValid" style="color:red; font-size:15px;">{{errors.lastname}}</span>
+          <span
+            v-if="errors.lastnameValid"
+            style="color:red; font-size:15px;"
+          >
+            {{ errors.lastname }}
+          </span>
         </center>
         <div>
           <div class="custom-control-inline">
             <input
+              v-model="user.gender"
               type="radio"
               name="gender"
               value="1"
               class="custom-control-input"
-              v-model="user.gender"
             >
             <span>Male</span>
           </div>
           <div class="custom-control-inline">
             <input
+              v-model="user.gender"
               type="radio"
               name="gender"
               value="2"
               class="custom-control-input"
-              v-model="user.gender"
             >
             <span>Female</span>
           </div>
         </div>
         <div class="textbox">
           <input
+            v-model="user.email"
             type="email"
             name="email"
             placeholder="Email Address"
-            v-model="user.email"
             @input="validateInputs"
           >
         </div>
         <center>
-          <span v-if="errors.emailValid" style="color:red; font-size:15px;">{{errors.email}}</span>
+          <span
+            v-if="errors.emailValid"
+            style="color:red; font-size:15px;"
+          >
+            {{ errors.email }}
+          </span>
         </center>
         <div class="textbox">
           <input
+            v-model="user.password"
             type="password"
             name="password"
             placeholder="Password"
-            v-model="user.password"
             @input="validateInputs"
           >
         </div>
         <center>
-          <span v-if="errors.passwordValid" style="color:red; font-size:15px;">{{errors.password}}</span>
+          <span
+            v-if="errors.passwordValid"
+            style="color:red; font-size:15px;"
+          >
+            {{ errors.password }}
+          </span>
         </center>
         <div class="textbox">
           <input
+            v-model="user.cpassword"
             type="password"
             placeholder="Confirm Password"
             name="cpassword"
-            v-model="user.cpassword"
             @input="validateInputs"
           >
         </div>
         <center>
-          <span v-if="errors.cpasswordValid" style="color:red; font-size:15px;">{{errors.cpassword}}</span>
+          <span
+            v-if="errors.cpasswordValid"
+            style="color:red; font-size:15px;"
+          >
+            {{ errors.cpassword }}
+          </span>
         </center>
-        <input type="submit" class="btn" value="Register">
+        <input
+          type="submit"
+          class="btn"
+          value="Register"
+        >
       </form>
-      <center>Already registered?
-        <router-link style="color:#2196f3;" to="/login">Login</router-link>
+      <center>
+        Already registered?
+        <router-link
+          style="color:#2196f3;"
+          to="/login"
+        >
+          Login
+        </router-link>
       </center>
     </div>
   </div>

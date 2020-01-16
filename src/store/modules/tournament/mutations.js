@@ -1,9 +1,9 @@
 export default {
-  setTotalTournaments(state, totalTournament){
-    state.totalTournaments = totalTournament;
+  setTotalTournaments (state, totalTournament) {
+    state.totalTournaments = totalTournament
   },
 
-  setTournaments(state, tournaments) {
-    state.tournaments = tournaments;
+  setTournaments (state, tournaments) {
+    state.tournaments = tournaments
   }
 }

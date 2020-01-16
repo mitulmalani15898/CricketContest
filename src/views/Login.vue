@@ -4,36 +4,61 @@
       <h2>Log In</h2>
       <form @submit.prevent="logIn">
         <div class="textbox">
-          <div v-if="authError" style="color:red; font-size:15px; margin-bottom:10px;">{{authError}}</div>
-          <span class="mdi mdi-account setspan"/>
+          <div
+            v-if="authError"
+            style="color:red; font-size:15px; margin-bottom:10px;"
+          >
+            {{ authError }}
+          </div>
+          <span class="mdi mdi-account setspan" />
           <input
+            v-model="user.email"
             type="email"
             name="email"
             placeholder="Username"
-            v-model="user.email"
             @input="validateInputs"
           >
         </div>
         <center>
-          <span v-if="errors.emailValid" style="color:red; font-size:15px;">{{errors.email}}</span>
+          <span
+            v-if="errors.emailValid"
+            style="color:red; font-size:15px;"
+          >
+            {{ errors.email }}
+          </span>
         </center>
         <div class="textbox">
-          <span class="mdi mdi-lock setspan"/>
+          <span class="mdi mdi-lock setspan" />
           <input
+            v-model="user.password"
             type="password"
             name="password"
             placeholder="Password"
-            v-model="user.password"
             @input="validateInputs"
           >
         </div>
         <center>
-          <span v-if="errors.passwordValid" style="color:red; font-size:15px;">{{errors.password}}</span>
+          <span
+            v-if="errors.passwordValid"
+            style="color:red; font-size:15px;"
+          >
+            {{ errors.password }}
+          </span>
         </center>
-        <input class="btn" type="submit" value="Log In">
+        <input
+          class="btn"
+          type="submit"
+          value="Log In"
+        >
       </form>
-      <center>Not registered yet?
-        <router-link style="color:#2196f3;" to="/signup">Register</router-link>
+      <center>
+        Not registered yet?
+        <router-link
+          style="color:#2196f3;"
+          to="/signup"
+        >
+          Register
+        </router-link>
       </center>
     </div>
   </div>

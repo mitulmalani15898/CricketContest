@@ -1,11 +1,11 @@
-import axios from "axios";
+import axios from 'axios'
 
 export default {
-  register(userData) {
+  register (userData) {
     return axios.post('auth/signup', userData)
   },
 
-  login(userData) {
+  login (userData) {
     return axios.post('auth/login', userData)
   }
 }

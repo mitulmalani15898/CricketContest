@@ -4,7 +4,7 @@ import authService from '@/service/auth'
 import router from '@/router/index'
 
 export default {
-  register({ commit, dispatch }, userData) {
+  register ({ commit, dispatch }, userData) {
     return new Promise((resolve, reject) => {
       authService.register(userData)
         .then(res => {
@@ -19,7 +19,7 @@ export default {
     })
   },
 
-  login({ commit }, authData) {
+  login ({ commit }, authData) {
     return new Promise((resolve, reject) => {
       authService.login(authData)
         .then(res => {
@@ -38,8 +38,8 @@ export default {
     })
   },
 
-  logout({ commit }) {
-    commit('clearAuthData');
+  logout ({ commit }) {
+    commit('clearAuthData')
     localStorage.removeItem('token')
     localStorage.removeItem('role')
     router.replace('/login')

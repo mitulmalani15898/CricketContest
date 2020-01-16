@@ -7,11 +7,11 @@ export default [
   {
     // Relative to /src/views
     path: '/login',
-    view: 'Login',
+    view: 'Login'
   },
   {
     path: '/signup',
-    view: 'Signup',
+    view: 'Signup'
   },
   {
     path: '/dashboard',
@@ -29,7 +29,7 @@ export default [
     meta: {
       requiresAuth: true,
       is_admin: true,
-      is_user: false,
+      is_user: false
     }
   },
   {
@@ -39,7 +39,7 @@ export default [
     meta: {
       requiresAuth: true,
       is_admin: true,
-      is_user: false,
+      is_user: false
     }
   },
   {
@@ -49,7 +49,7 @@ export default [
     meta: {
       requiresAuth: true,
       is_admin: true,
-      is_user: false,
+      is_user: false
     }
   },
   {
@@ -59,7 +59,7 @@ export default [
     meta: {
       requiresAuth: true,
       is_admin: true,
-      is_user: false,
+      is_user: false
     }
   },
   {
@@ -69,7 +69,7 @@ export default [
     meta: {
       requiresAuth: true,
       is_admin: false,
-      is_user: true,
+      is_user: true
     }
   }
 ]

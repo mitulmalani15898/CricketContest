@@ -1,10 +1,25 @@
 <template>
-  <v-container fill-height fluid grid-list-xl>
+  <v-container
+    fill-height
+    fluid
+    grid-list-xl
+  >
     <v-layout wrap>
-      <v-flex md12 sm12 lg12>
-        <v-parallax src="./img/backgroundTheme.jpg"></v-parallax>
+      <v-flex
+        md12
+        sm12
+        lg12
+      >
+        <v-parallax
+          src="./img/backgroundTheme.jpg"
+        />
       </v-flex>
-      <v-flex sm6 xs12 md6 lg3>
+      <v-flex
+        sm6
+        xs12
+        md6
+        lg3
+      >
         <material-stats-card
           color="green"
           icon="mdi-trophy-variant"
@@ -14,7 +29,12 @@
           sub-text="Last 24 Hours"
         />
       </v-flex>
-      <v-flex sm6 xs12 md6 lg3>
+      <v-flex
+        sm6
+        xs12
+        md6
+        lg3
+      >
         <material-stats-card
           color="orange"
           icon="mdi-account-group"
@@ -24,7 +44,12 @@
           sub-text="Get More Space..."
         />
       </v-flex>
-      <v-flex sm6 xs12 md6 lg3>
+      <v-flex
+        sm6
+        xs12
+        md6
+        lg3
+      >
         <material-stats-card
           color="red"
           icon="mdi-run"
@@ -34,7 +59,12 @@
           sub-text="Tracked from Github"
         />
       </v-flex>
-      <v-flex sm6 xs12 md6 lg3>
+      <v-flex
+        sm6
+        xs12
+        md6
+        lg3
+      >
         <material-stats-card
           color="info"
           icon="mdi-account"
@@ -50,10 +80,9 @@
 
 <script>
 export default {
-  data() {
-    return {};
+  data () {
+    return {}
   },
   methods: {}
-};
+}
 </script>
-
